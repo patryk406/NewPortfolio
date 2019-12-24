@@ -1,0 +1,60 @@
+@mixin passingAnimate {
+  animation: passing 1s linear infinite;
+}
+@keyframes passing {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 120%;
+  }
+}
+
+@mixin flow {
+  animation: whiteMove 2s linear infinite alternate;
+}
+@keyframes whiteMove {
+  0% {
+    box-shadow: 0px 0px 10px 5px aliceblue;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 15px aliceblue;
+  }
+}
+@mixin aura {
+  animation: dark 5s ease-in-out infinite alternate;
+}
+@keyframes dark {
+  0% {
+    box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.75);
+  }
+  10% {
+    box-shadow: 0px 0px 55px 15px rgba(0, 0, 0, 1);
+  }
+  25% {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  }
+  45% {
+    box-shadow: 0px 0px 35px 13px rgba(0, 0, 0, 0.9);
+  }
+  60% {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+  }
+  80% {
+    box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 1);
+  }
+}
+@mixin dot {
+  animation: expand 0.7s linear infinite alternate;
+}
+@keyframes expand {
+  0% {
+    border: 0px solid black;
+  }
+  100% {
+    border: 20px solid black;
+  }
+}

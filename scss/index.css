@@ -255,10 +255,14 @@ a img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #2d3436;
+  position: relative;
 }
 
 .intro {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,11 +276,12 @@ a img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  height: 70vh;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .intro h4 {
+  text-shadow: 0px 0px 5px #8c7ae6;
   text-align: center;
   font-size: 1.4rem;
   font-weight: bold;
@@ -284,8 +289,9 @@ a img {
 }
 
 .intro .down {
-  background: black;
   position: absolute;
+  margin-bottom: 5%;
+  background: black;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -510,6 +516,7 @@ a img {
           flex-direction: column;
   flex-direction: row;
   width: 100%;
+  margin: 20px 0px;
 }
 
 #projects .comment a {
@@ -526,9 +533,96 @@ a img {
   color: #c0392b;
 }
 
-#projects img {
+#projects .card-container {
+  width: 300px;
   height: 250px;
-  margin: 20px 20px;
+}
+
+#projects .card-container .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#projects .card-container .card figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#projects .card-container .card figure img {
+  height: 100%;
+  width: 100%;
+}
+
+#projects .card-container .card .front {
+  color: white;
+  text-align: center;
+}
+
+#projects .card-container .card .back {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 0.5fr 2fr 0.5fr;
+      grid-template-rows: 0.5fr 2fr 0.5fr;
+      grid-template-areas: "tier lvl" "price price" "influence influence";
+}
+
+#projects .card-container .card .back .tier {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: tier;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+#projects .card-container .card .back .lvl {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: lvl;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+#projects .card-container .card .back .price {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: price;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#projects .card-container .card .back .influence {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: influence;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #projects .description {
@@ -563,6 +657,21 @@ a img {
   font-size: 2rem;
 }
 
+.weather .back {
+  background: #000;
+  color: goldenrod;
+}
+
+.calculator .back {
+  background: #dcdde1;
+  color: #e84118;
+}
+
+.recipie .back {
+  background: #44bd32;
+  color: #dcdde1;
+}
+
 .weather:hover i.fab,
 .calculator:hover i.fab,
 .recipie:hover i.fab {
@@ -588,67 +697,94 @@ a img {
   color: #3498db;
 }
 
+.weather:hover .card,
+.calculator:hover .card,
+.recipie:hover .card {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 /* Contact section */
 #contact {
   margin-top: 60px;
   background: #faf07d;
-  position: relative;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "logo logo" "text text" "text text" "social solider" "footer solider";
 }
 
-#contact .contactContainer {
+#contact .solider {
+  height: 400px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: solider;
+}
+
+#contact img {
+  height: 200px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: logo;
+}
+
+#contact .contact-text {
+  width: 60%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text;
+}
+
+#contact .socialMedia {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: social;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#contact .socialMedia .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#contact .contactContainer img {
-  height: 200px;
-}
-
-#contact .contactContainer h2 {
-  margin: 5px 0px;
-}
-
-#contact .contactContainer .socialMedia {
-  width: 40%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
   text-align: center;
 }
 
-#contact .contactContainer .socialMedia i {
+#contact .socialMedia .icons i {
   font-size: 3rem;
   color: black;
   margin: 0px 15px 0px 15px;
 }
 
-#contact .contactContainer .socialMedia i:hover {
+#contact .socialMedia .icons i:hover {
   color: #c0392b;
 }
 
-#contact .contactContainer p.lead {
+#contact p.lead {
   font-weight: bold;
   padding-top: 25px;
-  border-top: 1px solid black;
   width: 100%;
   text-align: center;
   margin-bottom: 0 !important;
-}
-
-#contact .solider {
-  height: 300px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: footer;
 }
 /*# sourceMappingURL=index.css.map */

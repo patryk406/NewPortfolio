@@ -1,0 +1,319 @@
+@media (max-width: 576px) {
+  .mainContent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "img" "content";
+  }
+  .mainContent img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img;
+    height: 250px;
+  }
+  .mainContent .aboutMe {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: content;
+    width: 90%;
+  }
+  .frameworks,
+  .mainTech,
+  .otherTech {
+    -ms-grid-columns: none !important;
+        grid-template-columns: none !important;
+  }
+  .frameworks .techEl i,
+  .mainTech .techEl i,
+  .otherTech .techEl i {
+    font-size: 2rem !important;
+  }
+  .frameworks .techEl h6,
+  .mainTech .techEl h6,
+  .otherTech .techEl h6 {
+    font-size: 1.4rem !important;
+  }
+  .weather,
+  .recipie,
+  .calculator {
+    display: -ms-grid !important;
+    display: grid !important;
+    justify-items: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1.5fr 0.5fr;
+        grid-template-rows: 1fr 1.5fr 0.5fr;
+        grid-template-areas: "card" "text" "tech";
+  }
+  .weather .card-container,
+  .recipie .card-container,
+  .calculator .card-container {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: card;
+  }
+  .weather .description,
+  .recipie .description,
+  .calculator .description {
+    width: 90% !important;
+  }
+  .weather .description .text,
+  .recipie .description .text,
+  .calculator .description .text {
+    width: 100% !important;
+  }
+  .weather .description .comment,
+  .recipie .description .comment,
+  .calculator .description .comment {
+    width: 100% !important;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weather .tech,
+  .recipie .tech,
+  .calculator .tech {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: tech;
+    width: 100% !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .weather ul,
+  .recipie ul,
+  .calculator ul {
+    padding: 0px 15px !important;
+  }
+  #contact {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "logo logo" "text text" "text text" "social social" "footer solider";
+  }
+  .solider {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: solider;
+    height: 200px !important;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: logo;
+    height: 100px;
+  }
+  .socialMedia {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: social;
+    width: 100% !important;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .socialMedia .icons {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-text {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: text;
+    width: 90% !important;
+  }
+  .lead {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .mainContent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "img" "content";
+  }
+  .mainContent img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    height: 300px;
+  }
+  .mainContent .aboutMe {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: content;
+    width: 90%;
+  }
+  .frameworks,
+  .mainTech,
+  .otherTech {
+    -ms-grid-columns: none !important;
+        grid-template-columns: none !important;
+  }
+  .frameworks .techEl i,
+  .mainTech .techEl i,
+  .otherTech .techEl i {
+    font-size: 2rem !important;
+  }
+  .frameworks .techEl h6,
+  .mainTech .techEl h6,
+  .otherTech .techEl h6 {
+    font-size: 1.4rem !important;
+  }
+  .weather,
+  .recipie,
+  .calculator {
+    display: -ms-grid !important;
+    display: grid !important;
+    justify-items: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1.5fr 0.5fr;
+        grid-template-rows: 1fr 1.5fr 0.5fr;
+        grid-template-areas: "card" "text" "tech";
+  }
+  .weather .card-container,
+  .recipie .card-container,
+  .calculator .card-container {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: card;
+  }
+  .weather .description,
+  .recipie .description,
+  .calculator .description {
+    width: 90% !important;
+  }
+  .weather .description .text,
+  .recipie .description .text,
+  .calculator .description .text {
+    width: 100% !important;
+  }
+  .weather .description .comment,
+  .recipie .description .comment,
+  .calculator .description .comment {
+    width: 100% !important;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weather .tech,
+  .recipie .tech,
+  .calculator .tech {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: tech;
+    width: 100% !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .weather ul,
+  .recipie ul,
+  .calculator ul {
+    padding: 0px 15px !important;
+  }
+  #contact {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "logo logo" "text text" "text text" "social social" "footer solider";
+  }
+  .solider {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: solider;
+    height: 300px !important;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: logo;
+    height: 200px;
+  }
+  .socialMedia {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: social;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .socialMedia .icons {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .contact-text {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: text;
+    width: 90% !important;
+  }
+  .lead {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+}
+/*# sourceMappingURL=media.css.map */

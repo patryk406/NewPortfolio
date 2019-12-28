@@ -1,0 +1,218 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img" "content";
+    img {
+      justify-self: center;
+      grid-area: img;
+      height: 250px;
+    }
+    .aboutMe {
+      grid-area: content;
+      width: 90%;
+    }
+  }
+  .frameworks,
+  .mainTech,
+  .otherTech {
+    grid-template-columns: none !important;
+    .techEl {
+      i {
+        font-size: 2rem !important;
+      }
+      h6 {
+        font-size: 1.4rem !important;
+      }
+    }
+  }
+  .weather,
+  .recipie,
+  .calculator {
+    display: grid !important;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 0.5fr;
+    grid-template-areas: "card" "text" "tech";
+    .card-container {
+      justify-self: center;
+      grid-area: card;
+    }
+    .description {
+      width: 90% !important;
+      .text {
+        width: 100% !important;
+      }
+      .comment {
+        width: 100% !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .tech {
+      grid-area: tech;
+      width: 100% !important;
+      flex-direction: row !important;
+      //   display: flex !important;
+    }
+    ul {
+      padding: 0px 15px !important;
+    }
+  }
+  #contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logo logo" "text text" "text text" "social social" "footer solider";
+  }
+
+  .solider {
+    grid-area: solider;
+    height: 200px !important;
+    justify-self: end;
+  }
+
+  img {
+    grid-area: logo;
+    height: 100px;
+  }
+
+  .socialMedia {
+    grid-area: social;
+    width: 100% !important;
+    justify-self: center;
+    .icons {
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .contact-text {
+    grid-area: text;
+    width: 90% !important;
+  }
+
+  .lead {
+    grid-area: footer;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img" "content";
+    img {
+      grid-area: img;
+      justify-self: center;
+      height: 300px;
+    }
+    .aboutMe {
+      grid-area: content;
+      width: 90%;
+    }
+  }
+  .frameworks,
+  .mainTech,
+  .otherTech {
+    grid-template-columns: none !important;
+    .techEl {
+      i {
+        font-size: 2rem !important;
+      }
+      h6 {
+        font-size: 1.4rem !important;
+      }
+    }
+  }
+  .weather,
+  .recipie,
+  .calculator {
+    display: grid !important;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 0.5fr;
+    grid-template-areas: "card" "text" "tech";
+    .card-container {
+      justify-self: center;
+      grid-area: card;
+    }
+    .description {
+      width: 90% !important;
+      .text {
+        width: 100% !important;
+      }
+      .comment {
+        width: 100% !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .tech {
+      grid-area: tech;
+      width: 100% !important;
+      flex-direction: row !important;
+      //   display: flex !important;
+    }
+    ul {
+      padding: 0px 15px !important;
+    }
+  }
+  #contact {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logo logo" "text text" "text text" "social social" "footer solider";
+  }
+
+  .solider {
+    grid-area: solider;
+    height: 300px !important;
+    justify-self: end;
+  }
+
+  img {
+    grid-area: logo;
+    height: 200px;
+  }
+
+  .socialMedia {
+    grid-area: social;
+    justify-self: center;
+    .icons {
+      width: 100% !important;
+      display: flex;
+      justify-content: center !important;
+    }
+  }
+
+  .contact-text {
+    grid-area: text;
+    width: 90% !important;
+  }
+
+  .lead {
+    grid-area: footer;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
